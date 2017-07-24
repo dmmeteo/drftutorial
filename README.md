@@ -15,5 +15,11 @@ http://www.django-rest-framework.org/tutorial/2-requests-and-responses/#adding-o
 Tutorial 3: Class-based Views
 http://www.django-rest-framework.org/tutorial/3-class-based-views/#tutorial-3-class-based-views
 
-TODO Using Mixins
+Using Mixins
 http://www.django-rest-framework.org/tutorial/3-class-based-views/#using-mixins
+
+Tutorial 4: Authentication & Permissions
+http://www.django-rest-framework.org/tutorial/4-authentication-and-permissions/
+
+TODO Associating Snippets with Users
+http://www.django-rest-framework.org/tutorial/4-authentication-and-permissions/#associating-snippets-with-users

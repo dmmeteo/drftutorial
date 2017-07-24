@@ -9,6 +9,8 @@ from snippets import views
 urlpatterns = [
     url(r'^snippets/$', views.SnippetListView.as_view()),
     url(r'^snippets/(?P<pk>[0-9]+)/$', views.SnippetDetailView.as_view()),
+    url(r'^users/$', views.UserListView.as_view()),
+    url(r'^users/(?P<pk>[0-9]+)/$', views.UserDetailView.as_view()),
 ]
 
 ## Functional-based urls:

@@ -4,6 +4,7 @@ from snippets.models import Snippet
 from snippets.serializers import SnippetSerializer, UserSerializer
 from rest_framework import generics
 from rest_framework import permissions
+from snippets.permissions import IsOwnerOrReadOnly
 from django.contrib.auth.models import User
 
 
@@ -24,7 +25,8 @@ class UserDetailView(generics.RetrieveAPIView):
 class SnippetListView(generics.ListCreateAPIView):
     queryset = Snippet.objects.all()
     serializer_class = SnippetSerializer
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,
+                          IsOwnerOrReadOnly)
     
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
@@ -33,7 +35,8 @@ class SnippetListView(generics.ListCreateAPIView):
 class SnippetDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Snippet.objects.all()
     serializer_class = SnippetSerializer
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,
+                          IsOwnerOrReadOnly)
 
 
 ## Functional-based views:

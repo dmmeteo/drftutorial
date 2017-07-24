@@ -24,5 +24,8 @@ http://www.django-rest-framework.org/tutorial/4-authentication-and-permissions/
 Associating Snippets with Users
 http://www.django-rest-framework.org/tutorial/4-authentication-and-permissions/#associating-snippets-with-users
 
-TODO Adding login to the Browsable API
+Adding login to the Browsable API
 http://www.django-rest-framework.org/tutorial/4-authentication-and-permissions/#adding-login-to-the-browsable-api
+
+Tutorial 5: Relationships & Hyperlinked APIs
+http://www.django-rest-framework.org/tutorial/5-relationships-and-hyperlinked-apis/

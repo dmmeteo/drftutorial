@@ -3,12 +3,13 @@ from __future__ import unicode_literals
 from snippets.models import Snippet
 from snippets.serializers import SnippetSerializer, UserSerializer
 from rest_framework import generics
+from rest_framework import permissions
 from django.contrib.auth.models import User
 
 
 ### SUPER TRIVIAL
 
-## Class-based views:
+## Class-based views for Users:
 class UserListView(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
@@ -19,14 +20,20 @@ class UserDetailView(generics.RetrieveAPIView):
     serializer_class = UserSerializer
 
 
+## Class-based views for Snippets:
 class SnippetListView(generics.ListCreateAPIView):
     queryset = Snippet.objects.all()
     serializer_class = SnippetSerializer
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
     
 class SnippetDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Snippet.objects.all()
     serializer_class = SnippetSerializer
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 
 ## Functional-based views:

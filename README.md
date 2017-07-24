@@ -21,5 +21,8 @@ http://www.django-rest-framework.org/tutorial/3-class-based-views/#using-mixins
 Tutorial 4: Authentication & Permissions
 http://www.django-rest-framework.org/tutorial/4-authentication-and-permissions/
 
-TODO Associating Snippets with Users
+Associating Snippets with Users
 http://www.django-rest-framework.org/tutorial/4-authentication-and-permissions/#associating-snippets-with-users
+
+TODO Adding login to the Browsable API
+http://www.django-rest-framework.org/tutorial/4-authentication-and-permissions/#adding-login-to-the-browsable-api

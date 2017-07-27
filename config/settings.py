@@ -52,6 +52,10 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 ADMIN_URL = r'^admin/'
 
+REST_FRAMEWORK = {
+    'PAGE_SIZE': 2
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

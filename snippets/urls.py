@@ -5,32 +5,34 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from snippets import views
 
 
-## Class-based urls:
-urlpatterns = [
-    url(r'^$', views.api_root),
-    url(r'^snippets/$', views.SnippetListView.as_view()),
-    url(r'^snippets/(?P<pk>[0-9]+)/$', views.SnippetDetailView.as_view()),
-    url(r'^users/$', views.UserListView.as_view()),
-    url(r'^users/(?P<pk>[0-9]+)/$', views.UserDetailView.as_view()),
-    # REST Auth or in the end
-    # url(r'^api-auth/', include('rest_framework.urls',
-    #                            namespace='rest_framework')),
-    
-    url(r'^snippets/(?P<pk>[0-9]+)/highlight/$', views.SnippetHighlight.as_view()),
-]
-
-## Functional-based urls:
-# urlpatterns = [
-#     url(r'^snippets/$', views.snippet_list),
-#     url(r'^snippets/(?P<pk>[0-9]+)/$', views.snippet_detail),
-# ]
-
 # Adding optional format suffixes to our URLs
-urlpatterns = format_suffix_patterns(urlpatterns)
+urlpatterns = format_suffix_patterns([
+    url(r'^$', views.api_root),
+    ## Functional-based urls:
+    # url(r'^snippets/$', views.snippet_list),
+    # url(r'^snippets/(?P<pk>[0-9]+)/$', views.snippet_detail),
+    
+    ## Class-based urls:
+    url(r'^snippets/$',
+        views.SnippetListView.as_view(),
+        name='snippet-list'),
+    url(r'^snippets/(?P<pk>[0-9]+)/$',
+        views.SnippetDetailView.as_view(),
+        name='snippet-detail'),
+    url(r'^snippets/(?P<pk>[0-9]+)/highlight/$',
+        views.SnippetHighlightView.as_view(),
+        name='snippet-highlight'),
+    url(r'^users/$',
+        views.UserListView.as_view(),
+        name='user-list'),
+    url(r'^users/(?P<pk>[0-9]+)/$',
+        views.UserDetailView.as_view(),
+        name='user-detail'),
+])
 
-# REST Auth
+
+# Login and logout views for the browsable API
 urlpatterns += [
     url(r'^api-auth/', include('rest_framework.urls',
                                namespace='rest_framework')),
 ]
-

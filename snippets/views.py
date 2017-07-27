@@ -45,7 +45,7 @@ class SnippetDetailView(generics.RetrieveUpdateDestroyAPIView):
                           IsOwnerOrReadOnly)
     
     
-class SnippetHighlight(generics.GenericAPIView):
+class SnippetHighlightView(generics.GenericAPIView):
     queryset = Snippet.objects.all()
     renderer_classes = (renderers.StaticHTMLRenderer,)
     

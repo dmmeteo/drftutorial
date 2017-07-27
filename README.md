@@ -29,3 +29,6 @@ http://www.django-rest-framework.org/tutorial/4-authentication-and-permissions/#
 
 Tutorial 5: Relationships & Hyperlinked APIs
 http://www.django-rest-framework.org/tutorial/5-relationships-and-hyperlinked-apis/
+
+TODO Hyperlinking our API 
+http://www.django-rest-framework.org/tutorial/5-relationships-and-hyperlinked-apis/#hyperlinking-our-api

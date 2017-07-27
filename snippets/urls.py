@@ -7,6 +7,7 @@ from snippets import views
 
 ## Class-based urls:
 urlpatterns = [
+    url(r'^$', views.api_root),
     url(r'^snippets/$', views.SnippetListView.as_view()),
     url(r'^snippets/(?P<pk>[0-9]+)/$', views.SnippetDetailView.as_view()),
     url(r'^users/$', views.UserListView.as_view()),
@@ -14,6 +15,8 @@ urlpatterns = [
     # REST Auth or in the end
     # url(r'^api-auth/', include('rest_framework.urls',
     #                            namespace='rest_framework')),
+    
+    url(r'^snippets/(?P<pk>[0-9]+)/highlight/$', views.SnippetHighlight.as_view()),
 ]
 
 ## Functional-based urls:

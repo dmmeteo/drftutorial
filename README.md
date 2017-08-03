@@ -33,5 +33,8 @@ http://www.django-rest-framework.org/tutorial/5-relationships-and-hyperlinked-ap
 Hyperlinking our API 
 http://www.django-rest-framework.org/tutorial/5-relationships-and-hyperlinked-apis/#hyperlinking-our-api
 
-TODO Tutorial 6: ViewSets & Routers
+Tutorial 6: ViewSets & Routers
 http://www.django-rest-framework.org/tutorial/6-viewsets-and-routers/#refactoring-to-use-viewsets
+
+TODO Using Routers
+http://www.django-rest-framework.org/tutorial/6-viewsets-and-routers/#using-routers

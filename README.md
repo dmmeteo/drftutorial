@@ -34,4 +34,4 @@ Hyperlinking our API
 http://www.django-rest-framework.org/tutorial/5-relationships-and-hyperlinked-apis/#hyperlinking-our-api
 
 TODO Tutorial 6: ViewSets & Routers
-http://www.django-rest-framework.org/tutorial/6-viewsets-and-routers/
+http://www.django-rest-framework.org/tutorial/6-viewsets-and-routers/#refactoring-to-use-viewsets

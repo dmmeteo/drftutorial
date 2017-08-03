@@ -36,5 +36,8 @@ http://www.django-rest-framework.org/tutorial/5-relationships-and-hyperlinked-ap
 Tutorial 6: ViewSets & Routers
 http://www.django-rest-framework.org/tutorial/6-viewsets-and-routers/#refactoring-to-use-viewsets
 
-TODO Using Routers
+Using Routers
 http://www.django-rest-framework.org/tutorial/6-viewsets-and-routers/#using-routers
+
+Tutorial 7: Schemas & client libraries
+http://www.django-rest-framework.org/tutorial/7-schemas-and-client-libraries/

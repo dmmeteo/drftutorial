@@ -7,11 +7,11 @@ from rest_framework import permissions
 from rest_framework import renderers
 from snippets.permissions import IsOwnerOrReadOnly
 from django.contrib.auth.models import User
+from rest_framework.response import Response
 
 # Functional-based views imports
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from rest_framework.reverse import reverse
+# from rest_framework.decorators import api_view
+# from rest_framework.reverse import reverse
 
 # class-based views sets
 from rest_framework import viewsets
@@ -88,12 +88,12 @@ class SnippetViewSet(viewsets.ModelViewSet):
 
 
 ## Functional-based views:
-@api_view(['GET'])
-def api_root(request, format=None):
-    return Response({
-        'users': reverse('user-list', request=request, format=format),
-        'snippets': reverse('snippet-list', request=request, format=format)
-    })
+# @api_view(['GET'])
+# def api_root(request, format=None):
+#     return Response({
+#         'users': reverse('user-list', request=request, format=format),
+#         'snippets': reverse('snippet-list', request=request, format=format)
+#     })
 
 
 # @api_view(['GET', 'POST'])

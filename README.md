@@ -42,5 +42,8 @@ http://www.django-rest-framework.org/tutorial/6-viewsets-and-routers/#using-rout
 Tutorial 7: Schemas & client libraries
 http://www.django-rest-framework.org/tutorial/7-schemas-and-client-libraries/
 
-TODO Using a command line client
+Using a command line client
 http://www.django-rest-framework.org/tutorial/7-schemas-and-client-libraries/#using-a-command-line-client
+
+fin tutorial
+https://github.com/encode/rest-framework-tutorial
